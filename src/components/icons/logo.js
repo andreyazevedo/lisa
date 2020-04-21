@@ -14,7 +14,7 @@ export default class Logo extends React.Component {
           <G
             id="Onboarding-1.1"
             transform="translate(-173.000000, -28.000000)"
-            fill="#30C5CA"
+            fill="#30c5ca"
             fill-rule="nonzero">
             <G id="MENU">
               <Path

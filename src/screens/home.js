@@ -3,10 +3,10 @@ import {View, StyleSheet} from 'react-native';
 import Logo from '../components/icons/logo';
 import Greeting from '../components/greeting';
 import LisaA from '../components/icons/lisa-a';
+import Carousel from './onboarding/carousel';
 
 export const styles = StyleSheet.create({
   body: {
-    flex: 1,
     marginHorizontal: 36,
   },
   header: {
@@ -23,6 +23,10 @@ export const styles = StyleSheet.create({
   assistant: {
     alignItems: 'center',
     marginTop: 48,
+  },
+  carousel: {
+    alignItems: 'center',
+    height: 300,
   },
 });
 
@@ -41,9 +45,14 @@ const Assistant = () => (
 
 const HomeScreen = () => {
   return (
-    <View style={styles.body}>
-      <Heading />
-      <Assistant />
+    <View>
+      <View style={styles.body}>
+        <Heading />
+        <Assistant />
+      </View>
+      <View style={styles.carousel}>
+        <Carousel />
+      </View>
     </View>
   );
 };
