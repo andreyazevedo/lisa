@@ -1,18 +1,20 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import HomeScreen, {HomeScreenTitle, styles} from './home';
+import OnboardingScreen, {OnboardingScreenTitle, styles} from './onboarding';
 
 const Stack = createStackNavigator();
+
+console.disableYellowBox = true;
 
 const Navigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Home"
-        component={HomeScreen}
+        name="Onboarding"
+        component={OnboardingScreen}
         options={{
           headerStyle: styles.header,
-          headerTitle: HomeScreenTitle,
+          headerTitle: OnboardingScreenTitle,
           cardStyle: styles.card,
         }}
       />

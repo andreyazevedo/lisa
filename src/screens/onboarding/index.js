@@ -1,9 +1,10 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import Logo from '../components/icons/logo';
-import Greeting from '../components/greeting';
-import LisaA from '../components/icons/lisa-a';
-import Carousel from './onboarding/carousel';
+import Logo from '../../components/icons/logo';
+import LisaA from '../../components/icons/lisa-a';
+import Carousel from './carousel';
+import Heading from './heading';
+import Steps from './steps';
 
 export const styles = StyleSheet.create({
   body: {
@@ -17,25 +18,18 @@ export const styles = StyleSheet.create({
   card: {
     backgroundColor: '#f7f8f9',
   },
-  heading: {
-    marginTop: 48,
-  },
   assistant: {
     alignItems: 'center',
     marginTop: 48,
   },
   carousel: {
     alignItems: 'center',
-    height: 300,
+  },
+  steps: {
+    marginHorizontal: 36,
+    marginTop: 43,
   },
 });
-
-const Heading = () => (
-  <View style={styles.heading}>
-    <Greeting>Boa noite, Doutor.</Greeting>
-    <Greeting>Escolha uma respiração.</Greeting>
-  </View>
-);
 
 const Assistant = () => (
   <View style={styles.assistant}>
@@ -43,7 +37,7 @@ const Assistant = () => (
   </View>
 );
 
-const HomeScreen = () => {
+const OnboardingScreen = () => {
   return (
     <View>
       <View style={styles.body}>
@@ -53,11 +47,14 @@ const HomeScreen = () => {
       <View style={styles.carousel}>
         <Carousel />
       </View>
+      <View style={styles.steps}>
+        <Steps />
+      </View>
     </View>
   );
 };
 
-export const HomeScreenTitle = () => {
+export const OnboardingScreenTitle = () => {
   return (
     <View>
       <Logo width={30} height={13} />
@@ -65,4 +62,4 @@ export const HomeScreenTitle = () => {
   );
 };
 
-export default HomeScreen;
+export default OnboardingScreen;
