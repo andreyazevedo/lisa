@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import Logo from '../../components/icons/logo';
 import LisaA from '../../components/icons/lisa-a';
-import Carousel from './carousel';
+import Carousel from '../../components/carousel';
 import Heading from './heading';
 import Steps from './steps';
 
