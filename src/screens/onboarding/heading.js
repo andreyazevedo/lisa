@@ -18,12 +18,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const Heading = () => (
+const Heading = ({headline, subhead}) => (
   <View style={styles.heading}>
-    <Text style={styles.headline}>Boa noite, Doutor.</Text>
-    <Text style={[styles.headline, styles.subhead]}>
-      Escolha uma respiração.
-    </Text>
+    <Text style={styles.headline}>{headline}</Text>
+    <Text style={[styles.headline, styles.subhead]}>{subhead}</Text>
   </View>
 );
 

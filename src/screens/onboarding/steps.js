@@ -24,10 +24,14 @@ const styles = StyleSheet.create({
   },
 });
 
-const Steps = () => (
+const Steps = ({navigation}) => (
   <View style={styles.container}>
     <Text style={styles.countText}>1/2</Text>
-    <Text style={styles.buttonText}>Continuar</Text>
+    <Text
+      onPress={() => navigation.navigate('OnboardingB')}
+      style={styles.buttonText}>
+      Continuar
+    </Text>
   </View>
 );
 

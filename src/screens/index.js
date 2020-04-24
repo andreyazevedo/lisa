@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import OnboardingScreen, {OnboardingScreenTitle, styles} from './onboarding';
+import OnboardingBScreen from './onboarding/b';
 
 const Stack = createStackNavigator();
 
@@ -12,6 +13,15 @@ const Navigator = () => {
       <Stack.Screen
         name="Onboarding"
         component={OnboardingScreen}
+        options={{
+          headerStyle: styles.header,
+          headerTitle: OnboardingScreenTitle,
+          cardStyle: styles.card,
+        }}
+      />
+      <Stack.Screen
+        name="OnboardingB"
+        component={OnboardingBScreen}
         options={{
           headerStyle: styles.header,
           headerTitle: OnboardingScreenTitle,

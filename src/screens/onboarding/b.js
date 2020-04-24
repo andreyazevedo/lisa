@@ -1,8 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import Logo from '../../components/icons/logo';
-import LisaA from '../../components/icons/lisa-a';
-import Carousel from '../../components/carousel';
+import LisaB from '../../components/icons/lisa-b';
 import Heading from './heading';
 import Steps from './steps';
 
@@ -33,31 +32,25 @@ export const styles = StyleSheet.create({
 
 const Assistant = () => (
   <View style={styles.assistant}>
-    <LisaA width={88} height={148} />
+    <LisaB width={126} height={156} />
   </View>
 );
 
-const OnboardingScreen = ({navigation}) => {
+const OnboardingBScreen = () => {
   return (
     <View>
       <View style={styles.body}>
-        <Heading
-          headline="Boa noite, Doutor."
-          subhead="Escolha uma respiração."
-        />
+        <Heading headline="Muito bem." subhead="Quantas sessões deseja?" />
         <Assistant />
       </View>
-      <View style={styles.carousel}>
-        <Carousel />
-      </View>
       <View style={styles.steps}>
-        <Steps navigation={navigation} />
+        <Steps />
       </View>
     </View>
   );
 };
 
-export const OnboardingScreenTitle = () => {
+export const OnboardingBScreenTitle = () => {
   return (
     <View>
       <Logo width={30} height={13} />
@@ -65,4 +58,4 @@ export const OnboardingScreenTitle = () => {
   );
 };
 
-export default OnboardingScreen;
+export default OnboardingBScreen;
