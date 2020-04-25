@@ -36,7 +36,7 @@ const Assistant = () => (
   </View>
 );
 
-const OnboardingBScreen = () => {
+const Screen = () => {
   return (
     <View>
       <View style={styles.body}>
@@ -50,7 +50,7 @@ const OnboardingBScreen = () => {
   );
 };
 
-export const OnboardingBScreenTitle = () => {
+const Title = () => {
   return (
     <View>
       <Logo width={30} height={13} />
@@ -58,4 +58,8 @@ export const OnboardingBScreenTitle = () => {
   );
 };
 
-export default OnboardingBScreen;
+export default {
+  Screen,
+  Title,
+  styles,
+};
